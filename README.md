@@ -4,7 +4,7 @@ Front-End: Basicamente a implementação foi feita com o Angular 7 (7.3.9) e use
 Eu também usei um modelo de bootstrap proprietário (alguns componentes não eram muito alinhados, já que não há muito suporte para ele e sua extensão para manipulação de código é paga), aproveitando sua capacidade de resposta absoluta para diferentes dispositivos.
 
 Back-End:O BackEnd foi desenvolvido em Java 8 usando Spring Boot 2 (2.1.4), desenvolvido no Spring (muito bom soporte), aproveitando a otimização de recursos de automação de tarefas, incluindo seus cheques (por exemplo, a consulta da existência de registros)
-O aplicativo lerá as informações remotas das linhas e itinerários e elas persistirão ao iniciar o servidor. Isso pode demorar um minuto para popularizá-las.
+O aplicativo lerá as informações remotas das linhas e itinerários e elas persistirão ao iniciar o servidor (Tomcat embedded). Isso pode demorar um minuto para popularizá-las.
 
 Banco de Dados: Em princípio use H2 (db in-memory) para que você possa resolver problemas mais específicos de desenvolvimento evitando a configuração dele, apenas no final ele se adapta ao MySQL com seu mecanismo de busca MySAM que é o utilizado pelo Spring (acho que e sua default) para usar como padrão a robustez que tem.
 

@@ -1,0 +1,47 @@
+<div class="container container-table">
+  <h2 class="mbr-section-title mbr-fonts-style align-center pb-3 display-2">
+    Cadastro de Linhas
+  </h2>
+
+  <div class="table-wrapper">
+    <div class="container">
+      <div class="row search">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <!-- <div class="dataTables_filter"> -->
+          <form [formGroup]="createLines" (ngSubmit)="createLine()">
+            <div class="dataTables_filter">
+              <label class="searchInfo">Id:</label>
+              <input class="form-control input-sm" formControlName="id">
+            </div>
+            <div class="dataTables_filter">
+              <label class="searchInfo">Nome:</label>
+              <input class="form-control input-sm" formControlName="nome">
+            </div>
+            <div class="dataTables_filter">
+              <label class="searchInfo">Codigo:</label>
+              <input class="form-control input-sm" formControlName="codigo">
+            </div>
+            <div class="dataTables_filter">
+              <div class="mbr-section-btn">
+                <label class="searchInfo"></label>
+                <input class="btn btn-md btn-secondary display-4" type="submit" value="CADASTRAR" />
+              </div>
+            </div>
+          </form>
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row info">
+        <div class="col-md-6">
+          <div class="dataTables_info">
+          </div>
+        </div>
+        <div class="col-md-6"></div>
+      </div>
+    </div>
+  </div>
+</div>

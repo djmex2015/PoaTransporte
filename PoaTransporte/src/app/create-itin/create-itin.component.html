@@ -1,0 +1,56 @@
+<div class="container container-table">
+  <h2 class="mbr-section-title mbr-fonts-style align-center pb-3 display-2">
+    Cadastro de Itinerarios
+  </h2>
+
+  <div class="table-wrapper">
+    <div class="container">
+      <div class="row search">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <!-- <div class="dataTables_filter"> -->
+          <form [formGroup]="createItin" (ngSubmit)="createItinerary()">
+            <div class="dataTables_filter">
+              <div class="col-sm-14">
+                <label class="searchInfo">Id Linha:</label>
+                <!-- <input class="form-control input-sm" formControlName="id"> -->
+                <select class="form-control input-sm" formControlName="idLine">
+                  <option [value]="idLine.id" *ngFor="let idLine of idLines">{{idLine.id}}</option>
+                </select>
+              </div>
+            </div>
+            <div class="dataTables_filter">
+              <label class="searchInfo">Indice:</label>
+              <input class="form-control input-sm" formControlName="index">
+            </div>
+            <div class="dataTables_filter">
+              <label class="searchInfo">Latitud:</label>
+              <input class="form-control input-sm" formControlName="latitud">
+            </div>
+            <div class="dataTables_filter">
+              <label class="searchInfo">Longitud:</label>
+              <input class="form-control input-sm" formControlName="longitud">
+            </div>
+            <div class="dataTables_filter">
+              <div class="mbr-section-btn">
+                <label class="searchInfo"></label>
+                <input class="btn btn-md btn-secondary display-4" type="submit" value="CADASTRAR" />
+              </div>
+            </div>
+          </form>
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row info">
+        <div class="col-md-6">
+          <div class="dataTables_info">
+          </div>
+        </div>
+        <div class="col-md-6"></div>
+      </div>
+    </div>
+  </div>
+</div>

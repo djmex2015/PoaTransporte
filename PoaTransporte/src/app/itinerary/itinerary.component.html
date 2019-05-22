@@ -1,0 +1,44 @@
+<div class="container container-table">
+  <h2 class="mbr-section-title mbr-fonts-style align-center pb-3 display-2">
+    Itinerário {{id}}
+  </h2>
+  <div style="padding: 10px">
+    <div class="head-item">CODIGO: </div>
+    <div>{{codigo}}</div>
+    <p>
+      <div class="head-item">NOME: </div>{{nome}}
+  </div>
+  <div class="table-wrapper">
+    <div class="container scroll">
+      <table class="table isSearch" cellspacing="0">
+        <thead>
+          <tr class="table-heads ">
+            <th class="head-item mbr-fonts-style display-7">
+              INDEX</th>
+            <th class="head-item mbr-fonts-style display-7">
+              LATITUD</th>
+            <th class="head-item mbr-fonts-style display-7">
+              LONGITUD</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor='let pos of itinerary'>
+            <td class="body-item mbr-fonts-style display-7">{{pos.itineraryId.index}}</td>
+            <td class="body-item mbr-fonts-style display-7">{{pos.latitud}}</td>
+            <td class="body-item mbr-fonts-style display-7">{{pos.longitud}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="container">
+      <div class="row info">
+        <div class="col-md-6">
+          <div class="dataTables_info">
+          </div>
+        </div>
+        <div class="col-md-6"></div>
+      </div>
+    </div>
+  </div>
+</div>

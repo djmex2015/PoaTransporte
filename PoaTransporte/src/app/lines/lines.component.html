@@ -1,0 +1,58 @@
+<div class="container container-table">
+  <h2 class="mbr-section-title mbr-fonts-style align-center pb-3 display-2">
+    Linhas
+  </h2>
+
+  <div class="table-wrapper">
+    <div class="container">
+      <div class="row search">
+        <div class="col-md-6"></div>
+        <div class="col-md-6">
+          <div class="dataTables_filter">
+            <input-search [externalValue]="externalValue"></input-search>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container scroll">
+      <table class="table isSearch" cellspacing="0">
+        <thead>
+          <tr class="table-heads ">
+            <th class="head-item mbr-fonts-style display-7">
+              ID</th>
+            <th class="head-item mbr-fonts-style display-7">
+              CODIGO</th>
+            <th class="head-item mbr-fonts-style display-7">
+              NOME</th>
+            <th class="head-item mbr-fonts-style display-7">
+              ITINERARIO</th>
+            <th class="head-item mbr-fonts-style display-7">
+              DELETE</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor='let line of lines'>
+            <td class="body-item mbr-fonts-style display-7">{{line.id}}</td>
+            <td class="body-item mbr-fonts-style display-7">{{line.codigo}}</td>
+            <td class="body-item mbr-fonts-style display-7">{{line.nome}}</td>
+            <td class="body-item mbr-fonts-style display-7"><img width="30" height="30" src="../assets/itinerary.png"
+                (click)="goToItinerary(line.id, line.nome, line.codigo)" /></td>
+            <td class="body-item mbr-fonts-style display-7"><img width="30" height="30" src="../assets/delete.png"
+                (click)="delete(line)" /></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="container">
+      <div class="row info">
+        <div class="col-md-6">
+          <div class="dataTables_info">
+          </div>
+        </div>
+        <div class="col-md-6"></div>
+      </div>
+    </div>
+  </div>
+</div>

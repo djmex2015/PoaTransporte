@@ -1,11 +1,12 @@
 # PoaTransporte
-Front-End: Basicamente a implementação foi feita com o Angular 7 (7.3.9) e usei o Node.JS (10.15) como uma plataforma de desenvolvimento aproveitand também pelo seu apoio que é muito bom.
- Caso o site fosse produzido, o Apache seria uma boa opção.
-Eu também usei um modelo de bootstrap proprietário (alguns componentes não eram muito alinhados, já que não há muito suporte para ele e sua extensão para manipulação de código é paga), aproveitando sua capacidade de resposta absoluta para diferentes dispositivos.
 
-Back-End:O BackEnd foi desenvolvido em Java 8 usando Spring Boot 2 (2.1.4), desenvolvido no Spring (muito bom soporte), aproveitando a otimização de recursos de automação de tarefas, incluindo seus cheques (por exemplo, a consulta da existência de registros)
-O aplicativo lerá as informações remotas das linhas e itinerários e elas persistirão ao iniciar o servidor (Tomcat embedded). Isso pode demorar um minuto para popularizá-las.
+**Front-End**: Basically the implementation was done with Angular 7 (7.3.9) and I used Node.JS (10.15) as a development platform also taking advantage of its very good support.
+ If the site were produced, Apache would be a good option.
+I also used a proprietary bootstrap model (some components weren't very aligned as there isn't much support for it and its code-handling extension is paid), taking advantage of its absolute responsiveness to different devices.
 
-Banco de Dados: Em princípio use H2 (db in-memory) para que você possa resolver problemas mais específicos de desenvolvimento evitando a configuração dele, apenas no final ele se adapta ao MySQL com seu mecanismo de busca MySAM que é o utilizado pelo Spring (acho que e sua default) para usar como padrão a robustez que tem.
+**Back-End**: The BackEnd was developed in Java 8 using Spring Boot 2 (2.1.4), developed in Spring (very good support), taking advantage of the optimization of task automation resources, including their checks (eg the query of the existence of records)
+The application will read the remote information from the lines and itineraries and they will persist when starting the server (Tomcat embedded). It can take a minute to popularize them.
 
-No application.properties da aplicação as duas bases foram deixadas como uma opção (incluindo a habilitação do H2 consolo em caso de necessidade, para H2 também deve ser alterada no POM seu escopo para runtime, atualmente em teste)
+**Database**: In principle use H2 (db in-memory) so that you can solve more specific development problems avoiding its configuration, only in the end it adapts to MySQL with its MySAM search engine which is used by Spring ( I think its default) to default the robustness it has.
+
+In the application's application.properties the two bases were left as an option (including enabling the H2 console in case of need, for H2 its scope to runtime, currently under test, must also be changed in the POM)
